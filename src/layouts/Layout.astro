@@ -1,4 +1,7 @@
 ---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
 interface Props {
 	title: string;
 }
@@ -16,9 +19,11 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
+	<Header/>
 	<body>
 		<slot />
 	</body>
+	<Footer/>
 </html>
 <style is:global>
 	:root {
@@ -34,17 +39,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+		background: #0a0616;
+		text-color: 
 	}
 </style>
